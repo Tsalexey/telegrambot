@@ -1,0 +1,28 @@
+{% extends "_base.html" %}
+
+{% block content %}
+
+<br>
+
+<form action="/get_updates" method="POST">
+  <input type="submit" class="btn btn-primary btn-lg btn-block" value="Get Updates">
+</form>
+
+</br>
+</br>
+
+    <div class="card text-center">
+          <div class="card-header">
+            Chat IDs loaded from db
+          </div>
+          {% for chat in chats %}
+              <div class="card-body">
+                    <h4 class="well">Chat id: <strong>{{chat.id}}</strong></h4>
+              </div>
+          {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}

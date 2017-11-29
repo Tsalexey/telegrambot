@@ -1,0 +1,24 @@
+{% extends "_base.html" %}
+
+{% block content %}
+
+<br>
+
+    <div class="card text-center">
+          <div class="card-header">
+            Send Messages to all users
+          </div>
+          <div class="card-body">
+                <form action="/broadcast" method="GET">
+                  <div class="form-group">
+                    <input name="chat" class="form-control input-lg" type="text" placeholder="Enter a message" required>
+                  </div>
+                  <input type="submit" class="btn btn-primary btn-lg btn-block" value="Broadcast">
+                </form>
+          </div>
+          <div class="card-footer text-muted">
+            {{status}}
+          </div>
+    </div>
+
+{% endblock %}
